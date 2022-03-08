@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@font-face {
+  font-family: "Acier";
+  src: local("Acier"),
+    url(./Assets/acier.ttf) format("truetype");
+}
+
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+    url(./Assets/Montserrat-Bold.ttf) format("truetype");
+}
+
+.overlay {
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+a:link {
+  text-decoration: none;
+  /* color: black; */
+}
+a:visited {
+  text-decoration: none;
+  /* color: black; */
+}
+a:hover {
+  text-decoration: none;
+  /* color: black; */
+}
+a:active {
+  text-decoration: none;
+  /* color: black; */
+}
+
+.about-pic {
+  max-width: 100%;
+  opacity: 0.75
+}
