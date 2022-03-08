@@ -23,6 +23,7 @@ const About = () => {
               sx={{
                 mt: "10%",
                 pl: 3,
+                pr: 3,
                 color: "white",
                 textAlign: "left",
                 fontFamily: "Montserrat",

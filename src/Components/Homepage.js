@@ -51,7 +51,7 @@ const Homepage = () => {
           height: "100vh",
         }}
       >
-        <Stack direction="column" >
+        <Stack direction="column">
           <Typography
             variant="h1"
             sx={{
@@ -79,7 +79,7 @@ const Homepage = () => {
           >
             | Director |
           </Typography>
-          <Box sx={{ mt: 5}}>
+          <Box sx={{ mt: 5 }}>
             <NavGrid />
           </Box>
           <Link
@@ -87,12 +87,12 @@ const Homepage = () => {
             target="_blank"
             rel="noopener noreferrer"
             sx={{
-              width: '100vw',
+              width: "100vw",
               textAlign: "center",
               position: "absolute",
               left: 0,
               bottom: 10,
-              color: "white",
+              color: "rgb(237, 245, 225)",
               fontFamily: "Montserrat",
             }}
           >
