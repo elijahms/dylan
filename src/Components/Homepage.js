@@ -3,6 +3,7 @@ import { Typography, Box, Stack } from "@mui/material";
 import ReactPlayer from "react-player";
 import NavGrid from "./NavGrid";
 import dylanvid from "../Assets/dylanvid.mov";
+import surfer from "../Assets/hero.mp4";
 
 const Homepage = () => {
   const [videoHeight, setVideoHeight] = useState(window.innerWidth);
@@ -12,7 +13,7 @@ const Homepage = () => {
       {/* <Box sx={{ height: "100vh", border: "2px solid red" }}> */}
       <ReactPlayer
         className="react-player"
-        url={dylanvid}
+        url={surfer}
         playing
         loop
         muted
