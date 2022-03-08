@@ -5,26 +5,33 @@ import Typography from "@mui/material/Typography";
 import ReactPlayer from "react-player";
 import NavGrid from "./NavGrid";
 import dylanvid from "../Assets/outputvid.mp4";
+import mobdylanvid from "../Assets/iphone.mp4"
 
 const Homepage = () => {
   const [videoHeight, setVideoHeight] = useState(window.innerWidth);
+  let video = dylanvid
+  if (window.innerWidth <= 500) {
+    video = mobdylanvid 
+  }
 
   return (
     <div>
       <div className="video-div">
         <ReactPlayer
           // className="react-player"
-          style={{ backgroundColor: "black" }}
-          url={dylanvid}
-          // url="https://vimeo.com/668809608"
+          style={{ backgroundColor: "black"}}
+          url={video}
+          //url="https://vimeo.com/668809608"
           playing
           loop
           muted
-          playsinline
-          width={videoHeight <= 500 ? "442%" : window.innerWidth}
-          //width={window.innerWidth}
-          height={window.innerHeight}
-          //height={videoHeight <= 500 ? "100%" : "100%"}
+          //playsinline
+          //width={videoHeight <= 500 ? "380%" : window.innerWidth}
+          // width={window.innerWidth}
+          // height={window.innerHeight}
+          height = "100%"
+          width = "105%"
+          //height={videoHeight <= 500 ? "150%" : window.innerWidth}
         />
         {/* <video playsinline autoplay muted loop src={dylanvid} type="video/mp4"/> */}
         {/* <source src={dylanvid} type="video/mp4" />
