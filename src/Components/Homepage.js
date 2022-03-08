@@ -10,17 +10,25 @@ const Homepage = () => {
 
   return (
     <div>
-      {/* <Box sx={{ height: "100vh", border: "2px solid red" }}> */}
-      <ReactPlayer
-        className="react-player"
-        url={dylanvid}
-        playing
-        loop
-        muted
-        width={videoHeight <= 500 ? "385%" : "113%"}
-        height="100%"
-      />
-      {/* </Box> */}
+      <div className="video-div">
+        <ReactPlayer
+          // className="react-player"
+          style={{ backgroundColor: "black" }}
+          url={dylanvid}
+          // url="https://vimeo.com/668809608"
+          playing
+          loop
+          muted
+          playsinline
+          width={videoHeight <= 500 ? "442%" : window.innerWidth}
+          //width={window.innerWidth}
+          height={window.innerHeight}
+          //height={videoHeight <= 500 ? "100%" : "100%"}
+        />
+        {/* <video playsinline autoplay muted loop src={dylanvid} type="video/mp4"/> */}
+        {/* <source src={dylanvid} type="video/mp4" />
+        </video> */}
+      </div>
       <Box
         className="overlay"
         sx={{
@@ -39,7 +47,7 @@ const Homepage = () => {
               fontFamily: "Acier",
               fontSize: "7.5rem",
               "@media only screen and (max-width: 500px)": {
-                fontSize: "3.5rem",
+                fontSize: "3.8rem",
               },
             }}
           >
@@ -52,7 +60,7 @@ const Homepage = () => {
               textAlign: "center",
               fontFamily: "Montserrat",
               "@media only screen and (max-width: 500px)": {
-                fontSize: "3.5rem",
+                fontSize: "2rem",
               },
             }}
           >

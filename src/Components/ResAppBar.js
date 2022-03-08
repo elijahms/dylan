@@ -98,12 +98,18 @@ const ResponsiveAppBar = () => {
             }}
           >
             {pages.map((page) => (
-              <NavLink key={page} exact to={`/${page.toLowerCase()}`}>
+              <NavLink
+                className="main-menu"
+                key={page}
+                exact
+                to={`/${page.toLowerCase()}`}
+              >
                 <Button
                   onClick={handleCloseNavMenu}
                   sx={{
+                    fontSize: "1.5rem",
                     my: 2,
-                    color: "red",
+                    color: "#880808",
                     display: "block",
                     fontFamily: "Montserrat",
                   }}

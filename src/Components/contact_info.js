@@ -1,6 +1,7 @@
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+import VideoLabelIcon from "@mui/icons-material/VideoLabel";
 
 const socialObj = [
   {
@@ -17,13 +18,6 @@ const socialObj = [
     fontSize: 85,
     icon: LinkedInIcon,
   },
-  // {
-  //   name: "twitter",
-  //   link: "https://twitter.com/elijahsilverman",
-  //   color: "#1da1f2",
-  //   fontSize: 85,
-  //   icon: TwitterIcon,
-  // },
   {
     name: "email",
     link: "mailto:dmullinsdube@gmail.com",
@@ -31,6 +25,20 @@ const socialObj = [
     fontSize: 92,
     icon: EmailOutlinedIcon,
   },
+  {
+    name: "vimeo",
+    link: "https://vimeo.com/user5840950",
+    color: "#86c9ef",
+    fontSize: 85,
+    icon: VideoLabelIcon,
+  },
+  // {
+  //   name: "twitter",
+  //   link: "https://twitter.com/elijahsilverman",
+  //   color: "#1da1f2",
+  //   fontSize: 85,
+  //   icon: TwitterIcon,
+  // },
 ];
 
 export default socialObj;
