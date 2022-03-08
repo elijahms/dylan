@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Typography, Box, Stack } from "@mui/material";
+import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
 import ReactPlayer from "react-player";
 import NavGrid from "./NavGrid";
 import dylanvid from "../Assets/outputvid.mp4";
-import surfer from "../Assets/hero.mp4";
 
 const Homepage = () => {
   const [videoHeight, setVideoHeight] = useState(window.innerWidth);

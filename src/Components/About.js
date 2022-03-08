@@ -10,7 +10,7 @@ const About = () => {
 
   return (
     <div style={{ backgroundColor: "black" }}>
-      <Container sx={{ backgroundColor: "black", minHeight: "100vh" }}>
+      <Container sx={{ backgroundColor: "black", minHeight: "100vh", pb: 10 }}>
         <ResponsiveAppBar />
         <Grid container sx={{ mt: 20 }}>
           <Grid lg={6}>
