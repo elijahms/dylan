@@ -5,25 +5,26 @@ import Typography from "@mui/material/Typography";
 import ReactPlayer from "react-player";
 import NavGrid from "./NavGrid";
 import dylanvid from "../Assets/outputvid.mp4";
-import mobdylanvid from "../Assets/iphone.mp4"
+import mobdylanvid from "../Assets/iphone.mp4";
+import Link from "@mui/material/Link"
 
 const Homepage = () => {
   const [videoHeight, setVideoHeight] = useState(window.innerWidth);
-  let video = dylanvid
-  let width = "100%"
-  let height = "100%"
+  let video = dylanvid;
+  let width = "100%";
+  let height = "100%";
   if (window.innerWidth <= 500) {
-    video = mobdylanvid
-    width = "100%" 
-    height = "120%"
+    video = mobdylanvid;
+    width = "100%";
+    height = "120%";
   }
 
   return (
-    <div style={{backgroundColor: 'black'}} >
+    <div style={{ backgroundColor: "black", minHeight: "100vh" }}>
       <div className="video-div">
         <ReactPlayer
           // className="react-player"
-          style={{ backgroundColor: "black"}}
+          style={{ backgroundColor: "black" }}
           url={video}
           //url="https://vimeo.com/668809608"
           playing
@@ -33,8 +34,8 @@ const Homepage = () => {
           //width={videoHeight <= 500 ? "380%" : window.innerWidth}
           // width={window.innerWidth}
           // height={window.innerHeight}
-          height = {height}
-          width = {width}
+          height={height}
+          width={width}
           //height={videoHeight <= 500 ? "150%" : window.innerWidth}
         />
         {/* <video playsinline autoplay muted loop src={dylanvid} type="video/mp4"/> */}
@@ -50,7 +51,7 @@ const Homepage = () => {
           height: "100vh",
         }}
       >
-        <Stack>
+        <Stack direction="column" justifyContent="center" alignItems="center">
           <Typography
             variant="h1"
             sx={{
@@ -81,6 +82,20 @@ const Homepage = () => {
           <Box sx={{ mt: 5 }}>
             <NavGrid />
           </Box>
+          <Link
+            href="https://elijahsilverman.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              textAlign: "center",
+              position: "absolute",
+              bottom: 10,
+              color: "white",
+              fontFamily: "Montserrat",
+            }}
+          >
+            Website Designed and Created by Elijah Silverman
+          </Link>
         </Stack>
       </Box>
     </div>

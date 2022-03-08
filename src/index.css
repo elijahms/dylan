@@ -17,10 +17,10 @@ code {
   src: local("Acier"), url(./Assets/acier.ttf) format("truetype");
 }
 
-@font-face {
+/* @font-face {
   font-family: "Montserrat";
   src: local("Montserrat"), url(./Assets/Montserrat-Bold.ttf) format("truetype");
-}
+} */
 
 .main-menu :after {
   content: "";
@@ -55,16 +55,22 @@ code {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.react-player {
+/* .react-player {
   object-fit: cover;
   width: 100vw;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
+} */
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"), url(./Assets/Raleway-ExtraBold.ttf) format("truetype");
 }
 
 .video-div {
+  background-color: black;
   position: absolute;
   top: 0;
   right: 0;
