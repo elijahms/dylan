@@ -44,10 +44,13 @@ const ResponsiveAppBar = () => {
             sx={{
               flexGrow: 1,
               display: { xs: "flex", md: "none" },
-              justifyContent: "right",
+              justifyContent: "center",
+              alignItems: "flex-end",
+              // border: '2px solid red'
             }}
           >
             <IconButton
+              // sx={{border: '2px solid green'}}
               size="large"
               edge="end"
               aria-label="account of current user"
@@ -56,7 +59,7 @@ const ResponsiveAppBar = () => {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon />
+              <MenuIcon sx={{ fontSize: 45, color: "#880808" }} />
             </IconButton>
             <Menu
               id="menu-appbar"

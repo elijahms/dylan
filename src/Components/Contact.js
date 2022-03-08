@@ -32,7 +32,9 @@ const Contact = () => {
     <div style={{backgroundColor:"black"}}>
       <Container sx={{minHeight: '100vh'}}>
         <ResponsiveAppBar />
-        <Box sx={{ display: "flex", mt: '30vh' }}>
+        <Box sx={{ display: "flex", mt: 35, "@media only screen and (max-width: 500px)": {
+                mt: 12,
+              }, }}>
           <Stack
             direction={screenSize < 500 ? "column" : "row"}
             alignItems="center"

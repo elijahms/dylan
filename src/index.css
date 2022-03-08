@@ -37,14 +37,13 @@ code {
   background-color: #fff;
 }
 
-.home-menu {
-  color: white
+.home-menu a {
+  color: white;
+  font-size: 1rem;
 }
 
-.home-menu:hover {
+.home-menu a:hover {
   color: #880808;
-  transform: scale(1.2);
-  -webkit-transform: scale(1.4);
 }
 
 .overlay {

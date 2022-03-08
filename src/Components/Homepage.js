@@ -10,10 +10,12 @@ import mobdylanvid from "../Assets/iphone.mp4"
 const Homepage = () => {
   const [videoHeight, setVideoHeight] = useState(window.innerWidth);
   let video = dylanvid
-  let width = "105%"
+  let width = "100%"
+  let height = "100%"
   if (window.innerWidth <= 500) {
     video = mobdylanvid
-    width = "110%" 
+    width = "100%" 
+    height = "120%"
   }
 
   return (
@@ -31,7 +33,7 @@ const Homepage = () => {
           //width={videoHeight <= 500 ? "380%" : window.innerWidth}
           // width={window.innerWidth}
           // height={window.innerHeight}
-          height = "105%"
+          height = {height}
           width = {width}
           //height={videoHeight <= 500 ? "150%" : window.innerWidth}
         />

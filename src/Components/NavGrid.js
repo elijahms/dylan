@@ -5,6 +5,8 @@ const NavGrid = () => {
   return (
     <Grid
       container
+      rowSpacing={0}
+      columnSpacing={{ xs: 1, sm: 2, md: 3 }}
       justify="center"
       sx={{
         textAlign: "center",
@@ -13,9 +15,15 @@ const NavGrid = () => {
     >
       {["About", "Projects", "Connect"].map((g, i) => {
         return (
-          <Grid key={i} xs={12} md={4} lg={4}>
+          <Grid
+            className="home-menu"
+            key={i}
+            xs={12}
+            md={4}
+            lg={4}
+            sx={{ pt: 3 }}
+          >
             <NavLink
-              className="home-menu"
               style={{ fontFamily: "Montserrat" }}
               to={`/${g.toLowerCase()}`}
             >
