@@ -10,12 +10,14 @@ import mobdylanvid from "../Assets/iphone.mp4"
 const Homepage = () => {
   const [videoHeight, setVideoHeight] = useState(window.innerWidth);
   let video = dylanvid
+  let width = "105%"
   if (window.innerWidth <= 500) {
-    video = mobdylanvid 
+    video = mobdylanvid
+    width = "110%" 
   }
 
   return (
-    <div>
+    <div style={{backgroundColor: 'black'}} >
       <div className="video-div">
         <ReactPlayer
           // className="react-player"
@@ -29,8 +31,8 @@ const Homepage = () => {
           //width={videoHeight <= 500 ? "380%" : window.innerWidth}
           // width={window.innerWidth}
           // height={window.innerHeight}
-          height = "100%"
-          width = "105%"
+          height = "105%"
+          width = {width}
           //height={videoHeight <= 500 ? "150%" : window.innerWidth}
         />
         {/* <video playsinline autoplay muted loop src={dylanvid} type="video/mp4"/> */}
