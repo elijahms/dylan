@@ -25,7 +25,7 @@ const Homepage = () => {
           playing
           loop
           muted
-          //playsinline
+          playsinline
           //width={videoHeight <= 500 ? "380%" : window.innerWidth}
           // width={window.innerWidth}
           // height={window.innerHeight}
