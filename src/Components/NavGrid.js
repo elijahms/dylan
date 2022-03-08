@@ -5,7 +5,7 @@ const NavGrid = () => {
   return (
     <Grid
       container
-      rowSpacing={0}
+      rowSpacing={2}
       columnSpacing={{ xs: 1, sm: 2, md: 3 }}
       justify="center"
       sx={{
