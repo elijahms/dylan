@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Typography, Box, Stack } from "@mui/material";
 import ReactPlayer from "react-player";
 import NavGrid from "./NavGrid";
-import dylanvid from "../Assets/dylanvid.mov";
+import dylanvid from "../Assets/dylanvid.mp4";
 import surfer from "../Assets/hero.mp4";
 
 const Homepage = () => {
@@ -13,7 +13,7 @@ const Homepage = () => {
       {/* <Box sx={{ height: "100vh", border: "2px solid red" }}> */}
       <ReactPlayer
         className="react-player"
-        url={surfer}
+        url={dylanvid}
         playing
         loop
         muted
