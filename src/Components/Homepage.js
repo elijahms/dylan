@@ -6,10 +6,12 @@ import ReactPlayer from "react-player";
 import NavGrid from "./NavGrid";
 import dylanvid from "../Assets/outputvid.mp4";
 import mobdylanvid from "../Assets/iphone.mp4";
-import Link from "@mui/material/Link"
+import Link from "@mui/material/Link";
+import { useSpring, animated, config } from "@react-spring/web";
 
 const Homepage = () => {
   const [videoHeight, setVideoHeight] = useState(window.innerWidth);
+  // const [flip, set] = useState(false);
   let video = dylanvid;
   let width = "100%";
   let height = "100%";
@@ -18,6 +20,12 @@ const Homepage = () => {
     width = "100%";
     height = "120%";
   }
+  const MainText = useSpring({
+    to: { opacity: 1 },
+    from: { opacity: 0 },
+    delay: 1500,
+    config: config.molasses,
+  });
 
   return (
     <div style={{ backgroundColor: "black", minHeight: "100vh" }}>
@@ -51,54 +59,56 @@ const Homepage = () => {
           height: "100vh",
         }}
       >
-        <Stack direction="column">
-          <Typography
-            variant="h1"
-            sx={{
-              color: "white",
-              textAlign: "center",
-              fontFamily: "Acier",
-              fontSize: "7.5rem",
-              "@media only screen and (max-width: 500px)": {
-                fontSize: "3.8rem",
-              },
-            }}
-          >
-            Dylan <span style={{ color: "#880808" }}>Dube</span>
-          </Typography>
-          <Typography
-            variant="h4"
-            sx={{
-              color: "#880808",
-              textAlign: "center",
-              fontFamily: "Montserrat",
-              "@media only screen and (max-width: 500px)": {
-                fontSize: "2rem",
-              },
-            }}
-          >
-            | Director |
-          </Typography>
-          <Box sx={{ mt: 5 }}>
-            <NavGrid />
-          </Box>
-          <Link
-            href="https://elijahsilverman.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            sx={{
-              width: "100vw",
-              textAlign: "center",
-              position: "absolute",
-              left: 0,
-              bottom: 10,
-              color: "rgb(237, 245, 225)",
-              fontFamily: "Montserrat",
-            }}
-          >
-            Website Designed and Created by Elijah Silverman
-          </Link>
-        </Stack>
+        <animated.div style={MainText}>
+          <Stack direction="column">
+            <Typography
+              variant="h1"
+              sx={{
+                color: "white",
+                textAlign: "center",
+                fontFamily: "Acier",
+                fontSize: "7.5rem",
+                "@media only screen and (max-width: 500px)": {
+                  fontSize: "3.8rem",
+                },
+              }}
+            >
+              Dylan <span style={{ color: "#880808" }}>Dube</span>
+            </Typography>
+            <Typography
+              variant="h4"
+              sx={{
+                color: "#880808",
+                textAlign: "center",
+                fontFamily: "Montserrat",
+                "@media only screen and (max-width: 500px)": {
+                  fontSize: "2rem",
+                },
+              }}
+            >
+              | Director |
+            </Typography>
+            <Box sx={{ mt: 5 }}>
+              <NavGrid />
+            </Box>
+            <Link
+              href="https://elijahsilverman.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                width: "100vw",
+                textAlign: "center",
+                position: "absolute",
+                left: 0,
+                bottom: 10,
+                color: "rgb(237, 245, 225)",
+                fontFamily: "Montserrat",
+              }}
+            >
+              Website Designed and Created by Elijah Silverman
+            </Link>
+          </Stack>
+        </animated.div>
       </Box>
     </div>
   );
