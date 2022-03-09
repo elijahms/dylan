@@ -1,4 +1,3 @@
-import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -8,14 +7,14 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-// import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 const pages = ["About", "Projects", "Connect"];
 
 const ResponsiveAppBar = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -46,11 +45,9 @@ const ResponsiveAppBar = () => {
               display: { xs: "flex", md: "none" },
               justifyContent: "center",
               alignItems: "flex-end",
-              // border: '2px solid red'
             }}
           >
             <IconButton
-              // sx={{border: '2px solid green'}}
               size="large"
               edge="end"
               aria-label="account of current user"

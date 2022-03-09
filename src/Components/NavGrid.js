@@ -8,6 +8,7 @@ const NavGrid = () => {
       justify="center"
       sx={{
         textAlign: "center",
+        mt: 5
       }}
     >
       {["About", "Projects", "Connect"].map((g, i) => {

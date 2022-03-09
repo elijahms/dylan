@@ -1,49 +1,23 @@
-import Box from "@mui/material/Box";
-import Link from "@mui/material/Link";
-import Stack from "@mui/material/Stack";
-import socialObj from "./contact_info.js";
-import Container from "@mui/material/Container"
+import Container from "@mui/material/Container";
 import ResponsiveAppBar from "./ResAppBar.js";
+import SocialLinks from "./SocialLinks.js";
+import { useSpring, animated, config } from "@react-spring/web";
+import { about_par } from "./contact_info.js";
 
-const Contact = () => {
-  let screenSize = window.innerWidth;
-
-  const SocialLinks = () => {
-    return socialObj.map((s) => {
-      return (
-        <Box key={s.name} className="contact-icons">
-          <Link href={s.link} target="_blank" rel="noopener noreferrer">
-            <s.icon
-              sx={{
-                fontSize: s.fontSize,
-                color: "white",
-                "&:hover": {
-                  color: s.color,
-                },
-              }}
-            />
-          </Link>
-        </Box>
-      );
-    });
-  };
-
+const Contact = ({ mainBackColor }) => {
+  const Main = useSpring({
+    to: { opacity: 1 },
+    from: { opacity: 0 },
+    delay: 800,
+    config: config.molasses,
+  });
   return (
-    <div style={{backgroundColor:"black"}}>
-      <Container sx={{minHeight: '100vh'}}>
+    <div style={{ backgroundColor: mainBackColor, minHeight: "100vh" }}>
+      <Container>
         <ResponsiveAppBar />
-        <Box sx={{ display: "flex", mt: 35, "@media only screen and (max-width: 500px)": {
-                mt: 12,
-              }, }}>
-          <Stack
-            direction={screenSize < 500 ? "column" : "row"}
-            alignItems="center"
-            spacing={{ xs: 2, md: 3, lg: 20 }}
-            sx={{ margin: "auto" }}
-          >
-            <SocialLinks />
-          </Stack>
-        </Box>
+        <animated.div style={Main}>
+        <SocialLinks marginDesk={35} marginMob={12} initialIconCol="white" />
+        </animated.div>
       </Container>
     </div>
   );
